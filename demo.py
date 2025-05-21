@@ -1,10 +1,10 @@
 # 导入模块
 import os
-import pyJianYingDraft as draft
-from pyJianYingDraft import Intro_type, Transition_type, trange, tim
+import JianYingAutoClip as draft
+from JianYingAutoClip import Intro_type, Transition_type, trange, tim
 
 # 保存路径
-DUMP_PATH = r"<你的草稿文件夹>/draft_content.json"
+DUMP_PATH = r"/Users/lixiaolong/Movies/JianyingPro/User Data/Projects/com.lveditor.draft/1月9日/draft_info.json"
 assert os.path.exists(DUMP_PATH), f"未找到草稿文件{os.path.abspath(DUMP_PATH)}"
 
 tutorial_asset_dir = os.path.join(os.path.dirname(__file__), 'readme_assets', 'tutorial')
@@ -43,7 +43,7 @@ script.add_segment(audio_segment).add_segment(video_segment).add_segment(gif_seg
 
 # 创建一个带气泡效果的文本片段并添加到轨道中
 text_segment = draft.Text_segment(
-    "据说pyJianYingDraft效果还不错?", video_segment.target_timerange,  # 文本片段的首尾与上方视频片段一致
+    "据说JianYingAutoClip效果还不错?", video_segment.target_timerange,  # 文本片段的首尾与上方视频片段一致
     font=draft.Font_type.文轩体,                                      # 设置字体为文轩体
     style=draft.Text_style(color=(1.0, 1.0, 0.0)),                    # 字体颜色为黄色
     clip_settings=draft.Clip_settings(transform_y=-0.8)               # 位置在屏幕下方
